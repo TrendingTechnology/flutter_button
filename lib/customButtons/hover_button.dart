@@ -2,7 +2,8 @@ library flutter_buttons;
 
 import 'package:flutter/material.dart';
 
-class LookNowButton extends StatefulWidget {
+
+class HoverButton extends StatefulWidget {
   @required
   final String title;
   final VoidCallback onTap;
@@ -13,7 +14,7 @@ class LookNowButton extends StatefulWidget {
   final double titleSize;
   final BorderRadiusGeometry borderRadius;
 
-  LookNowButton({
+  HoverButton({
     Key key,
     this.title,
     this.onTap,
@@ -26,10 +27,10 @@ class LookNowButton extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _LookNowButtonState createState() => _LookNowButtonState();
+  _HoverButtonState createState() => _HoverButtonState();
 }
 
-class _LookNowButtonState extends State<LookNowButton> {
+class _HoverButtonState extends State<HoverButton> {
   bool _isTapped = false;
 
   @override
@@ -58,12 +59,12 @@ class _LookNowButtonState extends State<LookNowButton> {
               : widget.borderRadius,
           border: Border.all(
             width: 2,
-            color: widget.borderColor,
+            color: (widget.borderColor != null) ? widget.borderColor : Colors.black
           ),
           color: _isTapped ? widget.spashColor : null,
         ),
         child: Padding(
-          padding: const EdgeInsets.all(10),
+          padding: const EdgeInsets.all(12),
           child: Text(
             widget.title,
             style: TextStyle(

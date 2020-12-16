@@ -2,8 +2,7 @@ library flutter_buttons;
 
 import 'package:flutter/material.dart';
 
-// ignore: must_be_immutable
-class TextButton extends StatefulWidget {
+class FlutterTextButton extends StatefulWidget {
   @required
   final String title;
   final bool wOpacity;
@@ -15,23 +14,25 @@ class TextButton extends StatefulWidget {
   final double pressedSize;
   @required
   final Color color;
+  final FontWeight fontWeight;
 
-  TextButton({
-    Key key,
-    this.title,
-    this.wOpacity,
-    this.wAnimation,
-    this.opacityValue,
-    this.defaultSize,
-    this.pressedSize,
-    this.color,
-  }) : super(key: key);
+  FlutterTextButton(
+      {Key key,
+      this.title,
+      this.wOpacity,
+      this.wAnimation,
+      this.opacityValue,
+      this.defaultSize,
+      this.pressedSize,
+      this.color,
+      this.fontWeight})
+      : super(key: key);
 
   @override
-  _TextButtonState createState() => _TextButtonState();
+  _FlutterTextButtonState createState() => _FlutterTextButtonState();
 }
 
-class _TextButtonState extends State<TextButton> {
+class _FlutterTextButtonState extends State<FlutterTextButton> {
   bool _isTapped = false;
 
   @override
@@ -60,7 +61,11 @@ class _TextButtonState extends State<TextButton> {
       child: (widget.wOpacity == null && widget.wOpacity == false)
           ? buildText()
           : Opacity(
-              opacity: _isTapped ? widget.opacityValue : 1,
+              opacity: _isTapped
+                  ? (widget.opacityValue == null)
+                      ? .7
+                      : widget.opacityValue
+                  : 1,
               child: buildText(),
             ),
     );
@@ -72,8 +77,9 @@ class _TextButtonState extends State<TextButton> {
       style: TextStyle(
         fontSize: _isTapped ? widget.pressedSize : widget.defaultSize,
         color: (widget.color != null) ? widget.color : Colors.black,
+        fontWeight:
+            (widget.fontWeight != null) ? widget.fontWeight : FontWeight.w500,
       ),
     );
   }
-  
 }

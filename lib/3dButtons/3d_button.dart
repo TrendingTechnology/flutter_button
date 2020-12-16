@@ -5,10 +5,15 @@ import 'package:flutter/material.dart';
 class StyleOf3dButton {
   final Color topColor;
   final Color backColor;
+  final double width;
+  final double height;
   final BorderRadius borderRadius;
   final double z;
   final double tapped;
+
   const StyleOf3dButton({
+    this.width,
+    this.height,
     this.topColor = const Color(0xFF45484c),
     this.backColor = const Color(0xFF191a1c),
     this.borderRadius = const BorderRadius.all(
@@ -34,8 +39,8 @@ class Button3D extends StatefulWidget {
     @required this.onPressed,
     @required this.child,
     this.style = StyleOf3dButton.DEFAULT,
-    this.width = 100.0,
-    this.height = 90.0,
+    this.width = 120,
+    this.height = 60,
   });
 
   @override
