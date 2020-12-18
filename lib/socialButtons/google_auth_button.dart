@@ -1,5 +1,6 @@
 library flutter_buttons;
 
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -288,7 +289,6 @@ class MagicalGGButton extends StatefulWidget {
 
 class _MagicalGGButtonState extends State<MagicalGGButton> {
   bool _isTapped = false;
-  var imgPath = "assets/google.png";
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -323,16 +323,19 @@ class _MagicalGGButtonState extends State<MagicalGGButton> {
     return Container(
       height: 55,
       decoration: BoxDecoration(
-        color: Colors.red[800].withOpacity(.6),
+        color: Color(0xffFF6543).withOpacity(.6),
         borderRadius: BorderRadius.circular(30),
       ),
       width: MediaQuery.of(context).size.width - 20,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Image.asset(imgPath),
+          buildGoogleCard(),
           Text(
-            widget.title,
+            (widget.title != null)
+                ? widget.title
+                : "Magical Google Auth Button",
+            textAlign: TextAlign.center,
             style: TextStyle(
               color: Colors.white,
               fontSize: 18,
@@ -340,10 +343,35 @@ class _MagicalGGButtonState extends State<MagicalGGButton> {
             ),
           ),
           Opacity(
-            child: Image.asset(imgPath),
             opacity: 0,
-          ),
+            child: buildGoogleCard(),
+          )
         ],
+      ),
+    );
+  }
+
+  Container buildGoogleCard() {
+    return Container(
+      height: 55,
+      width: 55,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(100),
+        gradient: LinearGradient(
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+          colors: [
+            Color(0xffFF7B4E),
+            Color(0xffFF6543),
+          ],
+        ),
+      ),
+      child: Center(
+        child: FaIcon(
+          FontAwesomeIcons.google,
+          color: Colors.white,
+          size: 35,
+        ),
       ),
     );
   }

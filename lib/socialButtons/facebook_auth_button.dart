@@ -1,8 +1,8 @@
 library flutter_buttons;
 
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
 
 class FacebookAuthButton extends StatefulWidget {
   final VoidCallback onTap;
@@ -155,7 +155,6 @@ class _FacebookAuthButtonState extends State<FacebookAuthButton> {
   }
 }
 
-
 ///
 ///
 ///
@@ -290,7 +289,6 @@ class MagicalFBButton extends StatefulWidget {
 
 class _MagicalFBButtonState extends State<MagicalFBButton> {
   bool _isTapped = false;
-  var imgPath = "assets/fb.png";
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -325,16 +323,18 @@ class _MagicalFBButtonState extends State<MagicalFBButton> {
     return Container(
       height: 55,
       decoration: BoxDecoration(
-        color: Colors.blue[800].withOpacity(.6),
+        color: Colors.blue[800].withOpacity(.7),
         borderRadius: BorderRadius.circular(30),
       ),
       width: MediaQuery.of(context).size.width - 20,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Image.asset(imgPath),
+          buildFacebookCard(),
           Text(
-            widget.title,
+            (widget.title != null)
+                ? widget.title
+                : "Magical FB Auth Button",
             style: TextStyle(
               color: Colors.white,
               fontSize: 18,
@@ -349,8 +349,33 @@ class _MagicalFBButtonState extends State<MagicalFBButton> {
 
   Opacity ghost() {
     return Opacity(
-          child: Image.asset(imgPath),
-          opacity: 0,
-        );
+      child: buildFacebookCard(),
+      opacity: 0,
+    );
+  }
+
+  Container buildFacebookCard() {
+    return Container(
+      height: 55,
+      width: 55,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(100),
+        gradient: LinearGradient(
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+          colors: [
+            Color(0xff1D5BB0),
+            Color(0xff1F5079),
+          ],
+        ),
+      ),
+      child: Center(
+        child: FaIcon(
+          FontAwesomeIcons.facebook,
+          color: Colors.white,
+          size: 35,
+        ),
+      ),
+    );
   }
 }

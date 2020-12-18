@@ -1,8 +1,8 @@
 name: flutter_buttons
-description: A new Flutter package project.
+description: This packege help you for develop applications fast and clean. 
 version: 0.0.1
-author:
-homepage:
+author: Ismael Shakverdiev<st.bahahd@gmail.com>
+homepage: https://github.com/theiskaa/flutter_buttons
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
@@ -12,6 +12,7 @@ dependencies:
   flutter:
     sdk: flutter
   font_awesome_flutter: ^8.10.1
+  cached_network_image: ^2.0.0
 
 dev_dependencies:
   flutter_test:
@@ -24,9 +25,7 @@ dev_dependencies:
 flutter:
 
   # To add assets to your package, add an assets section, like this:
-  assets:
-    - assets/fb.png
-    - assets/google.png
+  # assets:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
   #
