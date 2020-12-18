@@ -1,8 +1,9 @@
+library flutter_buttons;
+
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class GoogleAuthButton extends StatefulWidget {
-  @required
   final VoidCallback onTap;
   final Color backgroundColor;
   final Color titleColor;
@@ -12,9 +13,13 @@ class GoogleAuthButton extends StatefulWidget {
   final bool upperCasedTitle;
   final double fontSize;
   final double iconSize;
-  @required
+  final FontWeight fontWeight;
   final bool wOpacity;
   final double opacityValue;
+  final bool wGradientColors;
+  final List<Color> gradientColors;
+  final AlignmentGeometry beginGradient;
+  final AlignmentGeometry endGradient;
 
   GoogleAuthButton({
     this.onTap,
@@ -28,6 +33,11 @@ class GoogleAuthButton extends StatefulWidget {
     this.iconSize,
     this.wOpacity,
     this.opacityValue,
+    this.gradientColors,
+    this.wGradientColors,
+    this.beginGradient,
+    this.endGradient,
+    this.fontWeight,
   });
   @override
   _GoogleAuthButtonState createState() => _GoogleAuthButtonState();
@@ -54,9 +64,9 @@ class _GoogleAuthButtonState extends State<GoogleAuthButton> {
         });
         widget.onTap();
       },
-      child: (widget.wOpacity == false && widget.wOpacity == null)
-          ? buildButton()
-          : buildButtonWOpacity(),
+      child: (widget.wOpacity != false && widget.wOpacity != null)
+          ? buildButtonWOpacity()
+          : buildButton(),
     );
   }
 
@@ -92,13 +102,16 @@ class _GoogleAuthButtonState extends State<GoogleAuthButton> {
             Text(
               (widget.upperCasedTitle == null ||
                       widget.upperCasedTitle == false)
-                  ? "facebook"
-                  : "FACEBOOK",
+                  ? "google"
+                  : "GOOGLE",
               style: TextStyle(
                 color: (widget.titleColor == null)
                     ? Color(0xff4285F4)
                     : widget.titleColor,
                 fontSize: (widget.fontSize != null) ? widget.fontSize : 25,
+                fontWeight: (widget.fontWeight != null)
+                    ? widget.fontWeight
+                    : FontWeight.w500,
               ),
             ),
 
@@ -114,9 +127,29 @@ class _GoogleAuthButtonState extends State<GoogleAuthButton> {
       borderRadius: (widget.borderRadius != null)
           ? widget.borderRadius
           : BorderRadius.circular(10),
-      color: (widget.backgroundColor == null)
-          ? Colors.white
-          : widget.backgroundColor,
+      gradient: (widget.wGradientColors == true)
+          ? (widget.gradientColors != null)
+              ? LinearGradient(
+                  colors: widget.gradientColors,
+                  begin: (widget.beginGradient != null)
+                      ? widget.beginGradient
+                      : Alignment.topRight,
+                  end: (widget.endGradient != null)
+                      ? widget.beginGradient
+                      : Alignment.bottomLeft,
+                )
+              : LinearGradient(
+                  begin: Alignment.topRight,
+                  end: Alignment.bottomLeft,
+                  colors: [
+                    Colors.grey,
+                    Colors.blue.withOpacity(.3),
+                  ],
+                )
+          : null,
+      color: (widget.backgroundColor != null)
+          ? widget.backgroundColor
+          : Colors.white,
       boxShadow: (widget.shadows != null) ? widget.shadows : [],
     );
   }
@@ -232,13 +265,11 @@ class CircularGGAuthButtonState extends State<CircularGGAuthButton> {
   }
 }
 
-
 ///
 ///
 ///
 ///
 ///
-
 
 class MagicalGGButton extends StatefulWidget {
   final String title;

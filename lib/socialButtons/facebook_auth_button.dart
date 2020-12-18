@@ -1,8 +1,10 @@
+library flutter_buttons;
+
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+
 class FacebookAuthButton extends StatefulWidget {
-  @required
   final VoidCallback onTap;
   final Color backgroundColor;
   final Color titleColor;
@@ -12,9 +14,13 @@ class FacebookAuthButton extends StatefulWidget {
   final bool upperCasedTitle;
   final double fontSize;
   final double iconSize;
-  @required
+  final FontWeight fontWeight;
   final bool wOpacity;
+  final bool wGradientColors;
   final double opacityValue;
+  final List<Color> gradientColors;
+  final AlignmentGeometry beginGradient;
+  final AlignmentGeometry endGradient;
 
   FacebookAuthButton({
     this.onTap,
@@ -22,12 +28,17 @@ class FacebookAuthButton extends StatefulWidget {
     this.titleColor,
     this.iconColor,
     this.borderRadius,
-    this.shadows,
     this.upperCasedTitle,
+    this.shadows,
     this.fontSize,
     this.iconSize,
     this.wOpacity,
+    this.fontWeight,
+    this.wGradientColors,
     this.opacityValue,
+    this.gradientColors,
+    this.beginGradient,
+    this.endGradient,
   });
   @override
   _FacebookAuthButtonState createState() => _FacebookAuthButtonState();
@@ -54,9 +65,9 @@ class _FacebookAuthButtonState extends State<FacebookAuthButton> {
         });
         widget.onTap();
       },
-      child: (widget.wOpacity == false && widget.wOpacity == null)
-          ? buildButton()
-          : buildButtonWOpacity(),
+      child: (widget.wOpacity != false && widget.wOpacity != null)
+          ? buildButtonWOpacity()
+          : buildButton(),
     );
   }
 
@@ -98,6 +109,9 @@ class _FacebookAuthButtonState extends State<FacebookAuthButton> {
                     ? Colors.white
                     : widget.titleColor,
                 fontSize: (widget.fontSize != null) ? widget.fontSize : 25,
+                fontWeight: (widget.fontWeight != null)
+                    ? widget.fontWeight
+                    : FontWeight.w500,
               ),
             ),
 
@@ -113,13 +127,34 @@ class _FacebookAuthButtonState extends State<FacebookAuthButton> {
       borderRadius: (widget.borderRadius != null)
           ? widget.borderRadius
           : BorderRadius.circular(10),
-      color: (widget.backgroundColor == null)
-          ? Color(0xff4267B2)
-          : widget.backgroundColor,
+      gradient: (widget.wGradientColors == true)
+          ? (widget.gradientColors != null)
+              ? LinearGradient(
+                  colors: widget.gradientColors,
+                  begin: (widget.beginGradient != null)
+                      ? widget.beginGradient
+                      : Alignment.topRight,
+                  end: (widget.endGradient != null)
+                      ? widget.beginGradient
+                      : Alignment.bottomLeft,
+                )
+              : LinearGradient(
+                  begin: Alignment.topRight,
+                  end: Alignment.bottomLeft,
+                  colors: [
+                    Color(0xff4267B2),
+                    Color(0xff4267B2).withOpacity(.7),
+                  ],
+                )
+          : null,
+      color: (widget.backgroundColor != null)
+          ? widget.backgroundColor
+          : Color(0xff4267B2),
       boxShadow: (widget.shadows != null) ? widget.shadows : [],
     );
   }
 }
+
 
 ///
 ///
