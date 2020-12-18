@@ -12,6 +12,7 @@ class HoverButton extends StatefulWidget {
   final Color titleColor;
   final Color tappedTitleColor;
   final double titleSize;
+  final FontWeight fontWeight;
   final BorderRadiusGeometry borderRadius;
 
   HoverButton({
@@ -24,6 +25,7 @@ class HoverButton extends StatefulWidget {
     this.tappedTitleColor,
     this.titleSize,
     this.borderRadius,
+    this.fontWeight,
   }) : super(key: key);
 
   @override
@@ -58,10 +60,15 @@ class _HoverButtonState extends State<HoverButton> {
               ? BorderRadius.circular(0)
               : widget.borderRadius,
           border: Border.all(
-            width: 2,
-            color: (widget.borderColor != null) ? widget.borderColor : Colors.black
-          ),
-          color: _isTapped ? widget.spashColor : null,
+              width: 2,
+              color: (widget.borderColor != null)
+                  ? widget.borderColor
+                  : Colors.black),
+          color: _isTapped
+              ? (widget.spashColor != null)
+                  ? widget.spashColor
+                  : Colors.purple
+              : null,
         ),
         child: Padding(
           padding: const EdgeInsets.all(12),
@@ -69,7 +76,14 @@ class _HoverButtonState extends State<HoverButton> {
             widget.title,
             style: TextStyle(
               fontSize: widget.titleSize,
-              color: _isTapped ? widget.tappedTitleColor : widget.titleColor,
+              color: _isTapped
+                  ? (widget.tappedTitleColor != null)
+                      ? widget.tappedTitleColor
+                      : Colors.white
+                  : (widget.titleColor != null)
+                      ? widget.titleColor
+                      : Colors.black,
+              fontWeight: widget.fontWeight,
             ),
           ),
         ),
