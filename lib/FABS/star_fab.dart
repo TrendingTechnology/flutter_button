@@ -2,14 +2,14 @@ library flutter_buttons;
 
 import 'package:flutter/material.dart';
 
-class StartFAB extends StatelessWidget {
+class StarFAB extends StatelessWidget {
   final Function onTap;
   final Widget child;
   final Color backgroundColor;
   final double elevation;
   final Color hoverColor;
   final Color splashColor;
-  const StartFAB({
+  const StarFAB({
     Key key,
     this.child,
     this.onTap,

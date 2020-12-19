@@ -1,4 +1,5 @@
 import 'package:example/screens/custom.dart';
+import 'package:example/screens/fab.dart';
 import 'package:example/screens/social.dart';
 import 'package:example/screens/text.dart';
 import 'package:flutter/material.dart';
@@ -43,7 +44,7 @@ class Home extends StatelessWidget {
             Social(),
             Custom(),
             TextScreen(),
-            Icon(Icons.directions_bike),
+            FabScreen(),
           ],
         ),
       ),
