@@ -1,4 +1,6 @@
+import 'package:example/screens/custom.dart';
 import 'package:example/screens/social.dart';
+import 'package:example/screens/text.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -39,8 +41,8 @@ class Home extends StatelessWidget {
         body: TabBarView(
           children: [
             Social(),
-            Icon(Icons.directions_car),
-            Icon(Icons.directions_transit),
+            Custom(),
+            TextScreen(),
             Icon(Icons.directions_bike),
           ],
         ),

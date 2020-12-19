@@ -34,21 +34,21 @@ class Social extends StatelessWidget {
 
   Column buildGooglesMagicals() {
     return Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            // Magical facebook auth button default mode
-            MagicalGGButton(
-              onTap: () {},
-            ),
-            SizedBox(height: 20),
-            // You can add title, opacity value and onTap method
-            MagicalGGButton(
-              title: "Sign In With Facebook",
-              opacityValue: .5,
-              onTap: () {},
-            ),
-          ],
-        );
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        // Magical facebook auth button default mode
+        MagicalGGButton(
+          onTap: () {},
+        ),
+        SizedBox(height: 20),
+        // You can add title, opacity value and onTap method
+        MagicalGGButton(
+          title: "Sign In With Google",
+          opacityValue: .5,
+          onTap: () {},
+        ),
+      ],
+    );
   }
 
   Column buildFacebooksMagicals() {

@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 class FlutterTextButton extends StatefulWidget {
   @required
   final String title;
+  final VoidCallback onTap;
   final double defaultSize;
   final double pressedSize;
   final Color color;
@@ -16,6 +17,7 @@ class FlutterTextButton extends StatefulWidget {
   FlutterTextButton({
     Key key,
     this.title,
+    this.onTap,
     this.defaultSize,
     this.pressedSize,
     this.color,
@@ -54,6 +56,7 @@ class _FlutterTextButtonState extends State<FlutterTextButton> {
         setState(() {
           _isTapped = false;
         });
+        widget.onTap();
       },
       child: buildText(),
     );

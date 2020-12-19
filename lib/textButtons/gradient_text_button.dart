@@ -5,10 +5,9 @@ import 'package:flutter/material.dart';
 class GradientTextButton extends StatefulWidget {
   @required
   final String title;
-  final bool wAnimation;
+  final VoidCallback onTap;
   final double defaultSize;
   final double pressedSize;
-  final Color color;
   final FontWeight fontWeight;
   final bool wGradientColors;
   final List<Color> gradientColors;
@@ -21,10 +20,9 @@ class GradientTextButton extends StatefulWidget {
   GradientTextButton({
     Key key,
     this.title,
-    this.wAnimation,
+    this.onTap,
     this.defaultSize,
     this.pressedSize,
-    this.color,
     this.wGradientColors,
     this.fontWeight,
     this.gradientColors,
@@ -64,6 +62,7 @@ class _GradientTextButtonState extends State<GradientTextButton> {
         setState(() {
           _isTapped = false;
         });
+        widget.onTap();
       },
       child: buildText(),
     );

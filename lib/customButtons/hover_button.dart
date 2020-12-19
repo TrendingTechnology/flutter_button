@@ -67,13 +67,13 @@ class _HoverButtonState extends State<HoverButton> {
           color: _isTapped
               ? (widget.spashColor != null)
                   ? widget.spashColor
-                  : Colors.purple
+                  : Colors.black
               : null,
         ),
         child: Padding(
           padding: const EdgeInsets.all(12),
           child: Text(
-            widget.title,
+            (widget.title != null) ? widget.title : "Hover Button",
             style: TextStyle(
               fontSize: widget.titleSize,
               color: _isTapped
