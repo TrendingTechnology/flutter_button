@@ -21,6 +21,7 @@ class Custom extends StatelessWidget {
               LikeButton(
                 onTap: () {},
               ),
+              SizedBox(height: 30),
 
               /// Attention! if you do some changing on like button you must to do [hot reolad] for view changes
               // Like Button with fully options
