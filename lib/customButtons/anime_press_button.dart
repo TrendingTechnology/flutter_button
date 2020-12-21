@@ -82,7 +82,7 @@ class _AnimePressButtonState extends State<AnimePressButton>
         _animationController.reverse();
       },
       onTapUp: (details) {
-        _animationController.reverse();
+        _animationController.reverse(); 
       },
       child: Transform.scale(
         scale: _scale,

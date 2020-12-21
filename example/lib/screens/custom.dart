@@ -20,15 +20,15 @@ class Custom extends StatelessWidget {
           lovebuttons(),
           SizedBox(height: 50),
           buildDivider(),
-          SizedBox(height: 50), 
-          buildOpacityButtons(), 
+          SizedBox(height: 50),
+          buildOpacityButtons(),
           SizedBox(height: 50),
           buildDivider(),
           SizedBox(height: 50),
           AnimePressButton(),
           SizedBox(height: 30),
           AnimePressButton(
-            borderRadius: BorderRadius.circular(10),
+            borderRadius: BorderRadius.circular(100),
             color: Colors.red,
             wGradient: true,
             gradientColors: [
