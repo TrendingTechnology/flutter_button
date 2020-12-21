@@ -1,4 +1,4 @@
-# flutter_buttons
+# flutter_button
 
 A Flutter buttons extansion. this extension contains:
 
@@ -15,7 +15,7 @@ add this line on the `pubspec.yaml`
 ```dart
 dependencies:
   ...
-  flutter_buttons: ^0.0.1
+  flutter_button: ^0.0.1
 ```
 
 after than start using package with implementing library path.
