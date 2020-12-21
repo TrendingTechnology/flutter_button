@@ -156,7 +156,7 @@ CircularFBAuthButton(
      color: Colors.black,
     ),
   ],
-),
+), 
 ```
 
 **_Google_**
@@ -395,7 +395,4 @@ StarFAB(
  onTap: () {},
 ),
 ```
-
-#
-
 if you wanna to look this package's full example check the example repo which one is down to this package's repository. [example repository](https://github.com/theiskaa/flutter_button/tree/main/example)
