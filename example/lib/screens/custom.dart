@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_buttons/customButtons/hover_button.dart';
 import 'package:flutter_buttons/customButtons/like_button.dart';
+import 'package:flutter_buttons/customButtons/opacity_button.dart';
 
 class Custom extends StatelessWidget {
   const Custom({Key key}) : super(key: key);
@@ -15,29 +16,63 @@ class Custom extends StatelessWidget {
           SizedBox(height: 50),
           buildDivider(),
           SizedBox(height: 50),
-          Column(
-            children: [
-              //Default mode
-              LikeButton(
-                onTap: () {},
-              ),
-              SizedBox(height: 30),
-
-              /// Attention! if you do some changing on like button you must to do [hot reolad] for view changes
-              // Like Button with fully options
-              LikeButton(
-                icon: Icons.home,
-                deactiveColor: Colors.grey,
-                activeColor: Colors.purple,
-                deactiveSize: 50,
-                activeSize: 55,
-                curve: Curves.easeInExpo,
-                onTap: () {},
-              ),
-            ],
-          ),
+          lovebuttons(),
+          SizedBox(height: 50),
+          buildDivider(),
+          SizedBox(height: 50),
+          buildOpacityButtons(),
         ],
       ),
+    );
+  }
+
+  Column buildOpacityButtons() {
+    return Column(
+      children: [
+        /// Opacity Button with default [opacityValue]
+        OpacityButton(
+          onTap: () {},
+          child: Image.asset(
+            'assets/like.png',
+            height: 50,
+          ),
+        ),
+        SizedBox(height: 30),
+
+        /// Opacity Button with the custom [opacityValue]
+        OpacityButton(
+          onTap: () {},
+          opacityValue: .3,
+          child: Image.asset(
+            'assets/like.png',
+            height: 60,
+          ),
+        ),
+      ],
+    );
+  }
+
+  Column lovebuttons() {
+    return Column(
+      children: [
+        //Default mode
+        LikeButton(
+          onTap: () {},
+        ),
+        SizedBox(height: 30),
+
+        /// Attention! if you do some changing on like button you must to do [hot reolad] for view changes
+        // Like Button with fully options
+        LikeButton(
+          icon: Icons.home,
+          deactiveColor: Colors.grey,
+          activeColor: Colors.purple,
+          deactiveSize: 50,
+          activeSize: 55,
+          curve: Curves.easeInExpo,
+          onTap: () {},
+        ),
+      ],
     );
   }
 
