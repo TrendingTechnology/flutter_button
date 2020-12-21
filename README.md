@@ -1,4 +1,4 @@
-# flutter_buttons
+# flutter_button
 
 A Flutter buttons extansion. this extension contains:
 
@@ -15,7 +15,7 @@ add this line on the `pubspec.yaml`
 ```dart
 dependencies:
   ...
-  flutter_buttons: ^0.0.1
+  flutter_button: ^0.0.1
 ```
 
 after than start using package with implementing library path.
@@ -398,4 +398,4 @@ StarFAB(
 
 #
 
-if you wanna to look this package's full example check the example repo which one is down to this package's repository. [example repository](https://github.com/theiskaa/flutter_buttons/tree/main/example)
+if you wanna to look this package's full example check the example repo which one is down to this package's repository. [example repository](https://github.com/theiskaa/flutter_button/tree/main/example)

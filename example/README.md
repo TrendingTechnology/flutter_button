@@ -1,6 +1,7 @@
 # example
 
-A new Flutter project.
+## Screenshots
+<img src="https://github.com/theiskaa/flutter_buttons/blob/main/example/assets/1.png" width="200"> <img src="https://github.com/theiskaa/flutter_buttons/blob/main/example/assets/2.png" width="200"> <img src="https://github.com/theiskaa/flutter_buttons/blob/main/example/assets/3.png" width="200"> <img src="https://github.com/theiskaa/flutter_buttons/blob/main/example/assets/4.png" width="200"> <img src="https://github.com/theiskaa/flutter_buttons/blob/main/example/assets/5.png" width="200"> <img src="https://github.com/theiskaa/flutter_buttons/blob/main/example/assets/6.png" width="200"> <img src="https://github.com/theiskaa/flutter_buttons/blob/main/example/assets/7.png" width="200">
 
 ## Getting Started
 

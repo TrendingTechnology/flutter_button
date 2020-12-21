@@ -1,3 +1,5 @@
+library flutter_button;
+
 import 'package:flutter/material.dart';
 
 class OpacityButton extends StatefulWidget {

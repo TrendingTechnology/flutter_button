@@ -1,3 +1,5 @@
+library flutter_button;
+
 import 'package:flutter/material.dart';
 
 class LikeButton extends StatefulWidget {

@@ -1,4 +1,4 @@
-library flutter_buttons;
+library flutter_button;
 
 import 'package:flutter/material.dart';
 
