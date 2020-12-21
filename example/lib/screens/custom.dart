@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_buttons/customButtons/hover_button.dart';
 import 'package:flutter_buttons/customButtons/like_button.dart';
 import 'package:flutter_buttons/customButtons/opacity_button.dart';
+import 'package:flutter_buttons/customButtons/anime_press_button.dart';
 
 class Custom extends StatelessWidget {
   const Custom({Key key}) : super(key: key);
@@ -19,8 +20,23 @@ class Custom extends StatelessWidget {
           lovebuttons(),
           SizedBox(height: 50),
           buildDivider(),
+          SizedBox(height: 50), 
+          buildOpacityButtons(), 
           SizedBox(height: 50),
-          buildOpacityButtons(),
+          buildDivider(),
+          SizedBox(height: 50),
+          AnimePressButton(),
+          SizedBox(height: 30),
+          AnimePressButton(
+            borderRadius: BorderRadius.circular(10),
+            color: Colors.red,
+            wGradient: true,
+            gradientColors: [
+              Colors.blue,
+              Colors.red,
+              Colors.green,
+            ],
+          ),
         ],
       ),
     );
