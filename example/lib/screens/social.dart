@@ -87,10 +87,11 @@ class Social extends StatelessWidget {
           borderRadius: BorderRadius.circular(30),
           shadows: [
             BoxShadow(
-                spreadRadius: 1.5,
-                blurRadius: 10,
-                offset: Offset(2, 7),
-                color: Color(0xff4285F4)),
+              spreadRadius: 1.5,
+              blurRadius: 10,
+              offset: Offset(2, 7),
+              color: Color(0xff4285F4),
+            ),
           ],
         ),
         SizedBox(height: 20),
@@ -107,6 +108,14 @@ class Social extends StatelessWidget {
           gradientColors: [
             Colors.black,
             Colors.blueGrey,
+          ],
+          shadows: [
+            BoxShadow(
+              spreadRadius: 1.5,
+              blurRadius: 10,
+              offset: Offset(2, 7),
+              color: Colors.black,
+            ),
           ],
         ),
         SizedBox(height: 20),
