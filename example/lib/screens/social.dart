@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_buttons/socialButtons/facebook_auth_button.dart';
 import 'package:flutter_buttons/socialButtons/google_auth_button.dart';
+import 'package:flutter_buttons/socialButtons/github_auth_button.dart';
 
 class Social extends StatelessWidget {
   const Social({Key key}) : super(key: key);
@@ -21,14 +22,104 @@ class Social extends StatelessWidget {
           SizedBox(height: 50),
           buildDivider(),
           SizedBox(height: 50),
+          buildGithubButtons(),
+          SizedBox(height: 50),
+          buildDivider(),
+          SizedBox(height: 50),
           buildFacebooksMagicals(),
           SizedBox(height: 50),
           buildDivider(),
           SizedBox(height: 50),
           buildGooglesMagicals(),
           SizedBox(height: 50),
+          buildDivider(),
+          SizedBox(height: 50),
+          buildGithubsMagicals(),
+          SizedBox(height: 50),
         ],
       ),
+    );
+  }
+
+  Column buildGithubsMagicals() {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        // Magical facebook auth button default mode
+        MagicalGIButton(
+          onTap: () {},
+        ),
+        SizedBox(height: 20),
+        // You can add title, opacity value and onTap method
+        MagicalGIButton(
+          title: "Sign In With Google",
+          opacityValue: .5,
+          onTap: () {},
+        ),
+      ],
+    );
+  }
+
+  Column buildGithubButtons() {
+    return Column(
+      children: [
+        //Default Usage
+        GithubAuthButton(
+          borderRadius: BorderRadius.circular(30),
+          onTap: () {},
+        ),
+        SizedBox(height: 20),
+
+        /// All Properties was used mode
+        GithubAuthButton(
+          onTap: () {},
+          wGradientColors: true,
+          wOpacity: true,
+          iconColor: Colors.black,
+          titleColor: Colors.black,
+          iconSize: 30,
+          borderRadius: BorderRadius.circular(30),
+          opacityValue: .4,
+          gradientColors: [
+            Colors.white,
+            Colors.white,
+          ],
+          shadows: [
+            BoxShadow(
+              spreadRadius: 1.5,
+              blurRadius: 10,
+              offset: Offset(0.5, 6),
+              color: Colors.black,
+            ),
+          ],
+        ),
+        SizedBox(height: 30),
+        //Default usage
+        CircularGIAuthButton(
+          borderRadius: BorderRadius.circular(30),
+          onTap: () {},
+        ),
+        SizedBox(height: 20),
+
+        /// All Properties was used mode
+        CircularGIAuthButton(
+          backgorundColor: Colors.white,
+          opacityValue: .7,
+          wOpacity: true,
+          wBorder: true,
+          iconColor: Colors.black,
+          shadows: [
+            BoxShadow(
+              spreadRadius: 1,
+              blurRadius: 10,
+              offset: Offset(0.5, 3),
+              color: Colors.black,
+            ),
+          ],
+          borderRadius: BorderRadius.circular(30),
+          onTap: () {},
+        ),
+      ],
     );
   }
 
