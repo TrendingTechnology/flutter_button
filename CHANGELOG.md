@@ -1,3 +1,7 @@
+## [0.0.2] - 22/12/2020
+* Github Auth Button, Circle GI Auth Button, Magical Gi Auth Button, Twitter Auth Button, Circle TW Auth Button, Magical TW Auth Button,
+
+
 ## [0.0.1] - 21/12/2020
 
 * 3D Button, 

@@ -107,6 +107,7 @@ class Social extends StatelessWidget {
         CircularTWAuthButton(
           borderRadius: BorderRadius.circular(30),
           onTap: () {},
+          wOpacity: true,
         ),
         SizedBox(height: 20),
 
@@ -157,6 +158,7 @@ class Social extends StatelessWidget {
         //Default Usage
         GithubAuthButton(
           borderRadius: BorderRadius.circular(30),
+          wOpacity: true,
           onTap: () {},
         ),
         SizedBox(height: 20),

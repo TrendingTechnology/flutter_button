@@ -1,32 +1,32 @@
-# flutter_button
-
-A Flutter buttons extansion. this extension contains:
+A `flutter_button` extension contains:
 
 - 3D Button,
 - Anime Press Button, Hover Button, Like Button, Opacity Button
 - Custom FAB, Star FAB.
-- Facebook Auth Button, Circle FB Auth Button, Magical FB Auth Button, Google Auth Button, Circle GG Auth Button, Magical GG Auth Button
+- Facebook Auth Button, Circle FB Auth Button, Magical FB Auth Button, Google Auth Button, Circle GG Auth Button, Magical GG Auth Button, Github Auth Button, Circle GI Auth Button, Magical Gi Auth Button, Twitter Auth Button, Circle TW Auth Button, Magical TW Auth Button,
 - Text Button, Gradient Text Button.
 
 ## Overview
 
-**_Usage and everthing about this packages was underlined down below. or check example repo_** [example repository](https://github.com/theiskaa/flutter_button/tree/main/example).
+**_Usage and everthing about this packages was underlined down below. if you wanna to give more info about using this plugin check example repo_** [example repository](https://github.com/theiskaa/flutter_button/tree/main/example).
 
+<!--
 <img src="https://github.com/theiskaa/flutter_button/blob/main/example/assets/gif/3D.gif" width="200"> <img src="https://github.com/theiskaa/flutter_button/blob/main/example/assets/gif/social.gif" width="200"> <img src="https://github.com/theiskaa/flutter_button/blob/main/example/assets/gif/custom.gif" width="200"> <img src="https://github.com/theiskaa/flutter_button/blob/main/example/assets/gif/text.gif" width="200"> <img src="https://github.com/theiskaa/flutter_button/blob/main/example/assets/gif/fab.gif" width="200">
+-->
+
+
 
 # Installation and Usage.
 
 add this line on the `pubspec.yaml`
 
-```dart
+```dart 
 dependencies:
   ...
-  flutter_button: ^0.0.1
+  flutter_button: ^0.0.2
 ```
-
-after than start using package with implementing library path.
-
-# 🛑 3D Button usage
+# OKI let's start using 💣
+## 🛑 3D Button usage
 
 **_Default Mode_**
 
@@ -59,7 +59,7 @@ import 'package:flutter_button/3dButtons/3d_button.dart';
 
 # ⚛︎ Social Auth Buttons
 
-**_Default Mode_**
+**_Default Mode of facebook auth button_**
 
 ```dart
 import 'package:flutter_button/socialButtons/facebook_auth_button.dart';
@@ -76,12 +76,12 @@ import 'package:flutter_button/socialButtons/facebook_auth_button.dart';
 import 'package:flutter_button/socialButtons/facebook_auth_button.dart';
 
 FacebookAuthButton(
-onTap: () {},
-wGradientColors: true,
-wOpacity: true,
-borderRadius: BorderRadius.circular(30),
-opacityValue: .4,
-gradientColors: [
+ onTap: () {},
+ wGradientColors: true,
+ wOpacity: true,
+ borderRadius: BorderRadius.circular(30),
+ opacityValue: .4,
+ gradientColors: [
   Colors.black,
   Colors.blueGrey,
 ],
@@ -144,7 +144,87 @@ GoogleAuthButton(
 ),
 ```
 
-### Circular Auth Buttons
+**_Default Mode of github auth button_**
+
+```dart
+import 'package:flutter_button/socialButtons/github_auth_button.dart';
+
+GithubAuthButton(
+ borderRadius: BorderRadius.circular(30),
+ onTap: () {},
+),
+```
+
+**Github Auth Button with custom properties\_**
+
+```dart
+import 'package:flutter_button/socialButtons/github_auth_button.dart';
+
+GithubAuthButton(
+ onTap: () {},
+ wGradientColors: true,
+ wOpacity: true,
+ iconColor: Colors.black,
+ titleColor: Colors.black,
+ iconSize: 30,
+ borderRadius: BorderRadius.circular(30),
+ opacityValue: .4,
+ gradientColors: [
+  Colors.white,
+  Colors.white,
+ ],
+ shadows: [
+    BoxShadow(
+      spreadRadius: 1.5,
+      blurRadius: 10,
+      offset: Offset(0.5, 6),
+      color: Colors.black,
+    ),
+  ],
+),
+```
+
+**_Default Mode of Twitter auth button_**
+
+```dart
+import 'package:flutter_button/socialButtons/twitter_auth_button.dart';
+
+TwitterAuthButton(
+  borderRadius: BorderRadius.circular(30),
+  onTap: () {},
+),
+```
+
+**Twitter Auth Button with custom properties\_**
+
+```dart
+import 'package:flutter_button/socialButtons/twitter_auth_button.dart';
+
+TwitterAuthButton(
+  onTap: () {},
+  wGradientColors: true,
+  wOpacity: true,
+  iconColor: Colors.black,
+  titleColor: Colors.black,
+  iconSize: 30,
+  borderRadius: BorderRadius.circular(30),
+  opacityValue: .4,
+  gradientColors: [
+    Colors.white,
+    Colors.white,
+  ],
+  shadows: [
+    BoxShadow(
+      spreadRadius: 1.5,
+      blurRadius: 10,
+      offset: Offset(0.5, 6),
+      color: Colors.black,
+    ),
+   ],
+),
+```
+
+## Circular Auth Buttons
 
 **_Facebook_**
 
@@ -184,7 +264,44 @@ CircularGGAuthButton(
 ),
 ```
 
-### Magical Auth Buttons
+**_Github_**
+
+```dart
+import 'package:flutter_button/socialButtons/github_auth_button.dart';
+
+CircularGIAuthButton(
+  backgorundColor: Colors.white,
+  opacityValue: .7,
+  wOpacity: true,
+  wBorder: true,
+  iconColor: Colors.black,
+  shadows: [
+    BoxShadow(
+      spreadRadius: 1,
+      blurRadius: 10,
+      offset: Offset(0.5, 3),
+      color: Colors.black,
+    ),
+  ],
+  borderRadius: BorderRadius.circular(30),
+  onTap: () {},
+),
+```
+
+**_Twitter_**
+
+```dart
+import 'package:flutter_button/socialButtons/twitter_auth_button.dart';
+
+ CircularTWAuthButton(
+  borderRadius: BorderRadius.circular(30),
+  onTap: () {},
+  wOpacity: true,
+),
+// you of course can customize for yourself this button button i like this button with the default style
+```
+
+## Magical Auth Buttons
 
 **_Facebook_**
 
@@ -207,6 +324,27 @@ MagicalGGButton(
   title: "Sign In With Google",
   opacityValue: .5,
   onTap: () {},
+),
+```
+**_Github_**
+
+```dart
+import 'package:flutter_button/socialButtons/github_auth_button.dart';
+
+MagicalGIButton(
+ title: "Sign In With Google",
+ opacityValue: .5,
+ onTap: () {},
+),
+```
+**_Twitter_**
+```dart
+import 'package:flutter_button/socialButtons/twitter_auth_button.dart';
+
+MagicalTWButton(
+ title: "Sign In With Twitter",
+ opacityValue: .5,
+ onTap: () {},
 ),
 ```
 

@@ -1,7 +1,7 @@
 name: flutter_button
 description: This packege help you for develop applications fast and clean. 
-version: 0.0.1
-# author: Ismael Shakverdiev <st.bahahd@gmail.com>
+version: 0.0.2
+author: Ismael Shakverdiev <st.bahahd@gmail.com>
 homepage: https://github.com/theiskaa/flutter_button
 
 environment:
