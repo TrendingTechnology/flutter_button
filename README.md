@@ -1,4 +1,4 @@
-# flutter_buttons
+# flutter_button
 
 A Flutter buttons extansion. this extension contains:
 
@@ -15,7 +15,7 @@ add this line on the `pubspec.yaml`
 ```dart
 dependencies:
   ...
-  flutter_buttons: ^0.0.1
+  flutter_button: ^0.0.1
 ```
 
 after than start using package with implementing library path.
@@ -25,7 +25,7 @@ after than start using package with implementing library path.
 **_Default Mode_**
 
 ```dart
-import 'package:flutter_buttons/3dButtons/3d_button.dart';
+import 'package:flutter_button/3dButtons/3d_button.dart';
 
 Button3D(
  onPressed: () {},
@@ -36,7 +36,7 @@ Button3D(
 **_3D Buttons With the custom properties_**
 
 ```dart
-import 'package:flutter_buttons/3dButtons/3d_button.dart';
+import 'package:flutter_button/3dButtons/3d_button.dart';
 
  Button3D(
  style: StyleOf3dButton(
@@ -56,7 +56,7 @@ import 'package:flutter_buttons/3dButtons/3d_button.dart';
 **_Default Mode_**
 
 ```dart
-import 'package:flutter_buttons/socialButtons/facebook_auth_button.dart';
+import 'package:flutter_button/socialButtons/facebook_auth_button.dart';
 
  FacebookAuthButton(
   onTap: () {},
@@ -67,7 +67,7 @@ import 'package:flutter_buttons/socialButtons/facebook_auth_button.dart';
 **_Facebook Auth Button with custom properties_**
 
 ```dart
-import 'package:flutter_buttons/socialButtons/facebook_auth_button.dart';
+import 'package:flutter_button/socialButtons/facebook_auth_button.dart';
 
 FacebookAuthButton(
 onTap: () {},
@@ -93,7 +93,7 @@ shadows: [
 **_Default Mode of Google Auth Button_**
 
 ```dart
-import 'package:flutter_buttons/socialButtons/google_auth_button.dart';
+import 'package:flutter_button/socialButtons/google_auth_button.dart';
 
 GoogleAuthButton(
  onTap: () {},
@@ -112,7 +112,7 @@ GoogleAuthButton(
 **_Google Auth Button with custom properties_**
 
 ```dart
-import 'package:flutter_buttons/socialButtons/google_auth_button.dart';
+import 'package:flutter_button/socialButtons/google_auth_button.dart';
 
 GoogleAuthButton(
  onTap: () {},
@@ -143,7 +143,7 @@ GoogleAuthButton(
 **_Facebook_**
 
 ```dart
-import 'package:flutter_buttons/socialButtons/facebook_auth_button.dart';
+import 'package:flutter_button/socialButtons/facebook_auth_button.dart';
 
 CircularFBAuthButton(
   borderRadius: BorderRadius.circular(30),
@@ -156,13 +156,13 @@ CircularFBAuthButton(
      color: Colors.black,
     ),
   ],
-),
+), 
 ```
 
 **_Google_**
 
 ```dart
-import 'package:flutter_buttons/socialButtons/google_auth_button.dart';
+import 'package:flutter_button/socialButtons/google_auth_button.dart';
 
 CircularGGAuthButton(
   borderRadius: BorderRadius.circular(30),
@@ -183,7 +183,7 @@ CircularGGAuthButton(
 **_Facebook_**
 
 ```dart
-import 'package:flutter_buttons/socialButtons/facebook_auth_button.dart';
+import 'package:flutter_button/socialButtons/facebook_auth_button.dart';
 
 MagicalFBButton(
   title: "Sign In With Facebook",
@@ -195,7 +195,7 @@ MagicalFBButton(
 **_Google_**
 
 ```dart
-import 'package:flutter_buttons/socialButtons/google_auth_button.dart';
+import 'package:flutter_button/socialButtons/google_auth_button.dart';
 
 MagicalGGButton(
   title: "Sign In With Google",
@@ -211,7 +211,7 @@ MagicalGGButton(
 **_Default mode_**
 
 ```dart
-import 'package:flutter_buttons/customButtons/hover_button.dart';
+import 'package:flutter_button/customButtons/hover_button.dart';
 
 HoverButton(
   title: "Hover Button",
@@ -222,7 +222,7 @@ HoverButton(
 **_All properties used version_**
 
 ```dart
-import 'package:flutter_buttons/customButtons/hover_button.dart';
+import 'package:flutter_button/customButtons/hover_button.dart';
 
 HoverButton(
   onTap: () {},
@@ -245,7 +245,7 @@ HoverButton(
 **_Default mode_**
 
 ```dart
-import 'package:flutter_buttons/customButtons/like_button.dart';
+import 'package:flutter_button/customButtons/like_button.dart';
 
 LikeButton(
   onTap: () {},
@@ -255,7 +255,7 @@ LikeButton(
 **_All properties used version_**
 
 ```dart
-import 'package:flutter_buttons/customButtons/like_button.dart';
+import 'package:flutter_button/customButtons/like_button.dart';
 
 LikeButton(
   icon: Icons.home,
@@ -271,7 +271,7 @@ LikeButton(
 ## 👻 Opacity Button:
 
 ```dart
-import 'package:flutter_buttons/customButtons/opacity_button.dart';
+import 'package:flutter_button/customButtons/opacity_button.dart';
 
 OpacityButton(
   onTap: () {},
@@ -395,7 +395,4 @@ StarFAB(
  onTap: () {},
 ),
 ```
-
-#
-
-if you wanna to look this package's full example check the example repo which one is down to this package's repository. [example repository](https://github.com/theiskaa/flutter_buttons/tree/main/example)
+if you wanna to look this package's full example check the example repo which one is down to this package's repository. [example repository](https://github.com/theiskaa/flutter_button/tree/main/example)
