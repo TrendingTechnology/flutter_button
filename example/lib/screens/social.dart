@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_buttons/socialButtons/facebook_auth_button.dart';
 import 'package:flutter_buttons/socialButtons/google_auth_button.dart';
 import 'package:flutter_buttons/socialButtons/github_auth_button.dart';
+import 'package:flutter_buttons/socialButtons/twitter_auth_button.dart';
 
 class Social extends StatelessWidget {
   const Social({Key key}) : super(key: key);
@@ -26,6 +27,10 @@ class Social extends StatelessWidget {
           SizedBox(height: 50),
           buildDivider(),
           SizedBox(height: 50),
+          buildTwitterButtons(),
+          SizedBox(height: 50),
+          buildDivider(),
+          SizedBox(height: 50),
           buildFacebooksMagicals(),
           SizedBox(height: 50),
           buildDivider(),
@@ -36,8 +41,94 @@ class Social extends StatelessWidget {
           SizedBox(height: 50),
           buildGithubsMagicals(),
           SizedBox(height: 50),
+          buildDivider(),
+          SizedBox(height: 50),
+          buildTwitterMagicals(),
+          SizedBox(height: 50),
         ],
       ),
+    );
+  }
+
+  Column buildTwitterMagicals() {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        // Magical facebook auth button default mode
+        MagicalTWButton(
+          onTap: () {},
+        ),
+        SizedBox(height: 20),
+        // You can add title, opacity value and onTap method
+        MagicalTWButton(
+          title: "Sign In With Twitter",
+          opacityValue: .5,
+          onTap: () {},
+        ),
+      ],
+    );
+  }
+
+  Column buildTwitterButtons() {
+    return Column(
+      children: [
+        //Default Usage
+        TwitterAuthButton(
+          borderRadius: BorderRadius.circular(30),
+          onTap: () {},
+        ),
+        SizedBox(height: 20),
+
+        /// All Properties was used mode
+        TwitterAuthButton(
+          onTap: () {},
+          wGradientColors: true,
+          wOpacity: true,
+          iconColor: Colors.black,
+          titleColor: Colors.black,
+          iconSize: 30,
+          borderRadius: BorderRadius.circular(30),
+          opacityValue: .4,
+          gradientColors: [
+            Colors.white,
+            Colors.white,
+          ],
+          shadows: [
+            BoxShadow(
+              spreadRadius: 1.5,
+              blurRadius: 10,
+              offset: Offset(0.5, 6),
+              color: Colors.black,
+            ),
+          ],
+        ),
+        SizedBox(height: 30),
+        //Default usage
+        CircularTWAuthButton(
+          borderRadius: BorderRadius.circular(30),
+          onTap: () {},
+        ),
+        SizedBox(height: 20),
+
+        /// All Properties was used mode
+        CircularTWAuthButton(
+          backgorundColor: Colors.white,
+          opacityValue: .5,
+          wOpacity: true,
+          wBorder: true,
+          iconColor: Colors.black,
+          shadows: [
+            BoxShadow(
+              spreadRadius: 1,
+              blurRadius: 10,
+              offset: Offset(0.5, 3),
+              color: Colors.black,
+            ),
+          ],
+          borderRadius: BorderRadius.circular(30),
+          onTap: () {},
+        ),
+      ],
     );
   }
 
@@ -224,15 +315,6 @@ class Social extends StatelessWidget {
           ],
         ),
         SizedBox(height: 20),
-        // Circular Facebook auth button with custom color and custom iconColor and opacity,
-        CircularGGAuthButton(
-          borderRadius: BorderRadius.circular(30),
-          onTap: () {},
-          wOpacity: true,
-          iconColor: Colors.white,
-          backgorundColor: Colors.black,
-        ),
-        SizedBox(height: 20),
         // Circular Facebook auth button with icon color and shadow,
         CircularGGAuthButton(
           borderRadius: BorderRadius.circular(30),
@@ -264,14 +346,6 @@ Column buildFacebookContainer() {
         borderRadius: BorderRadius.circular(30),
       ),
       SizedBox(height: 20),
-      // Facebook Auth button with default gradient and with opacity
-      FacebookAuthButton(
-        onTap: () {},
-        wGradientColors: true,
-        wOpacity: true,
-        borderRadius: BorderRadius.circular(30),
-      ),
-      SizedBox(height: 20),
       // Facebook Auth button with custom gradient and with custom opacity value and shadow
       FacebookAuthButton(
         onTap: () {},
@@ -297,14 +371,6 @@ Column buildFacebookContainer() {
       CircularFBAuthButton(
         borderRadius: BorderRadius.circular(30),
         onTap: () {},
-      ),
-      SizedBox(height: 20),
-      // Circular Facebook auth button with custom color and opacity,
-      CircularFBAuthButton(
-        borderRadius: BorderRadius.circular(30),
-        onTap: () {},
-        wOpacity: true,
-        backgorundColor: Colors.black,
       ),
       SizedBox(height: 20),
       // Circular Facebook auth button with icon color and shadow,

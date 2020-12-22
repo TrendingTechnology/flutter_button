@@ -3,7 +3,7 @@ library flutter_button;
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class GithubAuthButton extends StatefulWidget {
+class TwitterAuthButton extends StatefulWidget {
   final VoidCallback onTap;
   final Color backgroundColor;
   final Color titleColor;
@@ -15,35 +15,35 @@ class GithubAuthButton extends StatefulWidget {
   final double iconSize;
   final FontWeight fontWeight;
   final bool wOpacity;
-  final bool wGradientColors;
   final double opacityValue;
+  final bool wGradientColors;
   final List<Color> gradientColors;
   final AlignmentGeometry beginGradient;
   final AlignmentGeometry endGradient;
 
-  GithubAuthButton({
+  TwitterAuthButton({
     this.onTap,
     this.backgroundColor,
     this.titleColor,
     this.iconColor,
     this.borderRadius,
-    this.upperCasedTitle,
     this.shadows,
+    this.upperCasedTitle,
     this.fontSize,
     this.iconSize,
     this.wOpacity,
-    this.fontWeight,
-    this.wGradientColors,
     this.opacityValue,
     this.gradientColors,
+    this.wGradientColors,
     this.beginGradient,
     this.endGradient,
+    this.fontWeight,
   });
   @override
-  _GithubAuthButtonState createState() => _GithubAuthButtonState();
+  _TwitterAuthButtonState createState() => _TwitterAuthButtonState();
 }
 
-class _GithubAuthButtonState extends State<GithubAuthButton> {
+class _TwitterAuthButtonState extends State<TwitterAuthButton> {
   bool _isTapped = false;
   @override
   Widget build(BuildContext context) {
@@ -90,7 +90,7 @@ class _GithubAuthButtonState extends State<GithubAuthButton> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             FaIcon(
-              FontAwesomeIcons.github,
+              FontAwesomeIcons.twitter,
               color:
                   (widget.iconColor == null) ? Colors.white : widget.iconColor,
               size: (widget.iconSize != null) ? widget.iconSize : 25,
@@ -101,8 +101,8 @@ class _GithubAuthButtonState extends State<GithubAuthButton> {
             Text(
               (widget.upperCasedTitle == null ||
                       widget.upperCasedTitle == false)
-                  ? "github"
-                  : "GITHUB",
+                  ? "twitter"
+                  : "TWITTER",
               style: TextStyle(
                 color: (widget.titleColor == null)
                     ? Colors.white
@@ -141,14 +141,14 @@ class _GithubAuthButtonState extends State<GithubAuthButton> {
                   begin: Alignment.topRight,
                   end: Alignment.bottomLeft,
                   colors: [
-                    Colors.black,
-                    Colors.blueGrey[900],
+                    Color(0xff1DA1F2),
+                    Color(0xff1DA1F2).withOpacity(.7)
                   ],
                 )
           : null,
       color: (widget.backgroundColor != null)
           ? widget.backgroundColor
-          : Colors.black,
+          : Color(0xff1DA1F2),
       boxShadow: (widget.shadows != null) ? widget.shadows : [],
     );
   }
@@ -159,9 +159,8 @@ class _GithubAuthButtonState extends State<GithubAuthButton> {
 ///
 ///
 ///
-///
 
-class CircularGIAuthButton extends StatefulWidget {
+class CircularTWAuthButton extends StatefulWidget {
   final VoidCallback onTap;
   final Color backgorundColor;
   final Color iconColor;
@@ -174,7 +173,7 @@ class CircularGIAuthButton extends StatefulWidget {
   final List<BoxShadow> shadows;
   final BorderRadiusGeometry borderRadius;
 
-  CircularGIAuthButton({
+  CircularTWAuthButton({
     this.onTap,
     this.backgorundColor,
     this.iconColor,
@@ -189,10 +188,10 @@ class CircularGIAuthButton extends StatefulWidget {
   });
 
   @override
-  CircularGIAuthButtonState createState() => CircularGIAuthButtonState();
+  CircularTWAuthButtonState createState() => CircularTWAuthButtonState();
 }
 
-class CircularGIAuthButtonState extends State<CircularGIAuthButton> {
+class CircularTWAuthButtonState extends State<CircularTWAuthButton> {
   bool _isTapped = false;
 
   @override
@@ -239,9 +238,10 @@ class CircularGIAuthButtonState extends State<CircularGIAuthButton> {
   Center buildButtonBody() {
     return Center(
       child: FaIcon(
-        FontAwesomeIcons.github,
-        color: (widget.iconColor != null) ? widget.iconColor : Colors.white,
-        size: (widget.iconSize == null) ? 35 : widget.iconSize,
+        FontAwesomeIcons.twitter,
+        color:
+            (widget.iconColor != null) ? widget.iconColor : Colors.white,
+        size: (widget.iconSize == null) ? 30 : widget.iconSize,
       ),
     );
   }
@@ -251,12 +251,12 @@ class CircularGIAuthButtonState extends State<CircularGIAuthButton> {
       borderRadius: (widget.borderRadius == null) ? null : widget.borderRadius,
       color: (widget.backgorundColor != null)
           ? widget.backgorundColor
-          : Colors.black,
+          :Color(0xff1DA1F2),
       border: (widget.wBorder != null && widget.wBorder != false)
           ? Border.all(
-              color: (widget.borderColor != null)
-                  ? widget.borderColor
-                  : Colors.black,
+              color: (widget.borderColor == null)
+                  ? Colors.black
+                  : widget.borderColor,
             )
           : null,
       boxShadow: (widget.shadows == null) ? [] : widget.shadows,
@@ -269,24 +269,23 @@ class CircularGIAuthButtonState extends State<CircularGIAuthButton> {
 ///
 ///
 ///
-///
 
-class MagicalGIButton extends StatefulWidget {
+class MagicalTWButton extends StatefulWidget {
   final String title;
   final double opacityValue;
   final VoidCallback onTap;
 
-  MagicalGIButton({
+  MagicalTWButton({
     this.title,
     this.opacityValue,
     this.onTap,
   });
 
   @override
-  _MagicalGIButtonState createState() => _MagicalGIButtonState();
+  _MagicalTWButtonState createState() => _MagicalTWButtonState();
 }
 
-class _MagicalGIButtonState extends State<MagicalGIButton> {
+class _MagicalTWButtonState extends State<MagicalTWButton> {
   bool _isTapped = false;
   @override
   Widget build(BuildContext context) {
@@ -322,36 +321,35 @@ class _MagicalGIButtonState extends State<MagicalGIButton> {
     return Container(
       height: 55,
       decoration: BoxDecoration(
-        color: Colors.black.withOpacity(.7),
+        color: Color(0xff1DA1F2).withOpacity(.6),
         borderRadius: BorderRadius.circular(30),
       ),
       width: MediaQuery.of(context).size.width - 20,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          buildGithubCard(),
+          buildTwitterCard(),
           Text(
-            (widget.title != null) ? widget.title : "Magical GI Auth Button",
+            (widget.title != null)
+                ? widget.title
+                : "Magical Twitter Auth Button",
+            textAlign: TextAlign.center,
             style: TextStyle(
               color: Colors.white,
               fontSize: 18,
               fontWeight: FontWeight.w600,
             ),
           ),
-          ghost(),
+          Opacity(
+            opacity: 0,
+            child: buildTwitterCard(),
+          )
         ],
       ),
     );
   }
 
-  Opacity ghost() {
-    return Opacity(
-      child: buildGithubCard(),
-      opacity: 0,
-    );
-  }
-
-  Container buildGithubCard() {
+  Container buildTwitterCard() {
     return Container(
       height: 55,
       width: 55,
@@ -361,16 +359,16 @@ class _MagicalGIButtonState extends State<MagicalGIButton> {
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
           colors: [
-            Colors.black,
-            Colors.blueGrey[900],
+            Color(0xff1DA1F2),
+            Color(0xFF0094F0),
           ],
         ),
       ),
       child: Center(
         child: FaIcon(
-          FontAwesomeIcons.github,
+          FontAwesomeIcons.twitter,
           color: Colors.white,
-          size: 35,
+          size: 33,
         ),
       ),
     );
