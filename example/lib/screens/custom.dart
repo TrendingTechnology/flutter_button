@@ -17,6 +17,10 @@ class Custom extends StatelessWidget {
           SizedBox(height: 50),
           buildDivider(),
           SizedBox(height: 50),
+          buildAnimatedHoverButtons(),
+          SizedBox(height: 50),
+          buildDivider(),
+          SizedBox(height: 50),
           lovebuttons(),
           SizedBox(height: 50),
           buildDivider(),
@@ -25,21 +29,29 @@ class Custom extends StatelessWidget {
           SizedBox(height: 50),
           buildDivider(),
           SizedBox(height: 50),
-          AnimePressButton(),
-          SizedBox(height: 30),
-          AnimePressButton(
-            borderRadius: BorderRadius.circular(100),
-            color: Colors.red,
-            wGradient: true,
-            gradientColors: [
-              Colors.pink,
-              Colors.purpleAccent,
-            ],
-            title: "Animation Button",
-            titleColor: Colors.white,
-          ),
+          buildAnimePressButton()
         ],
       ),
+    );
+  }
+
+  Column buildAnimePressButton() {
+    return Column(
+      children: [
+        AnimePressButton(),
+        SizedBox(height: 30),
+        AnimePressButton(
+          borderRadius: BorderRadius.circular(100),
+          color: Colors.red,
+          wGradient: true,
+          gradientColors: [
+            Colors.pink,
+            Colors.purpleAccent,
+          ],
+          title: "Animation Button",
+          titleColor: Colors.white,
+        ),
+      ],
     );
   }
 
@@ -88,6 +100,45 @@ class Custom extends StatelessWidget {
           activeSize: 55,
           curve: Curves.easeInExpo,
           onTap: () {},
+        ),
+      ],
+    );
+  }
+
+  Column buildAnimatedHoverButtons() {
+    return Column(
+      children: [
+        // Default Mode
+        AnimatedHoverButton(
+          //title: "Animated Hover Button",
+          onTap: () {},
+        ),
+        SizedBox(height: 50),
+        // Hover button with custom spalsh color,custom title size and border radius
+        AnimatedHoverButton(
+          onTap: () {},
+          title: "Buy Now",
+          spashColor: Colors.red,
+          titleSize: 20,
+          borderRadius: BorderRadius.circular(30),
+          duration: Duration(milliseconds: 500),
+        ),
+        SizedBox(height: 50),
+        // And this is all options used version
+        AnimatedHoverButton(
+          onTap: () {},
+          title: "Add To Cart",
+          titleSize: 30,
+          titleColor: Colors.orange[900],
+          spashColor: Colors.yellow,
+          tappedTitleColor: Colors.black,
+          fontWeight: FontWeight.bold,
+          
+          borderColor: Colors.orange[900],
+          borderRadius: BorderRadius.only(
+            bottomLeft: Radius.circular(30),
+            topRight: Radius.circular(30),
+          ),
         ),
       ],
     );

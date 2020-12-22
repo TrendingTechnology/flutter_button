@@ -1,4 +1,4 @@
-A `flutter_button` extension contains:
+### `flutter_button` extension contains:
 
 - 3D Button,
 - Anime Press Button, Hover Button, Like Button, Opacity Button
@@ -10,9 +10,8 @@ A `flutter_button` extension contains:
 
 **_Usage and everthing about this packages was underlined down below. if you wanna to give more info about using this plugin check example repo_** [example repository](https://github.com/theiskaa/flutter_button/tree/main/example).
 
-<!--
 <img src="https://github.com/theiskaa/flutter_button/blob/main/example/assets/gif/3D.gif" width="200"> <img src="https://github.com/theiskaa/flutter_button/blob/main/example/assets/gif/social.gif" width="200"> <img src="https://github.com/theiskaa/flutter_button/blob/main/example/assets/gif/custom.gif" width="200"> <img src="https://github.com/theiskaa/flutter_button/blob/main/example/assets/gif/text.gif" width="200"> <img src="https://github.com/theiskaa/flutter_button/blob/main/example/assets/gif/fab.gif" width="200">
--->
+
 
 
 
@@ -25,7 +24,7 @@ dependencies:
   ...
   flutter_button: ^0.0.2
 ```
-# OKI let's start using 💣
+# OKI let's start using `flutter_button` 💣
 ## 🛑 3D Button usage
 
 **_Default Mode_**
@@ -155,7 +154,7 @@ GithubAuthButton(
 ),
 ```
 
-**Github Auth Button with custom properties\_**
+**_Github Auth Button with custom properties_**
 
 ```dart
 import 'package:flutter_button/socialButtons/github_auth_button.dart';
@@ -195,7 +194,7 @@ TwitterAuthButton(
 ),
 ```
 
-**Twitter Auth Button with custom properties\_**
+**_Twitter Auth Button with custom properties_**
 
 ```dart
 import 'package:flutter_button/socialButtons/twitter_auth_button.dart';
@@ -384,6 +383,39 @@ HoverButton(
 ),
 ```
 
+### 🌪 Animated Hover Button:
+**_Default mode_**
+
+```dart
+import 'package:flutter_button/customButtons/hover_button.dart';
+
+AnimatedHoverButton(
+  title: "Animated Hover Button",
+  onTap: () {},
+),
+```
+
+**_All properties used version_**
+```dart
+import 'package:flutter_button/customButtons/hover_button.dart';
+
+AnimatedHoverButton(
+ onTap: () {},
+ title: "Add To Cart",
+ titleSize: 30,
+ duration: Duration(milliseconds: 500),
+ titleColor: Colors.orange[900],
+ spashColor: Colors.yellow,
+ tappedTitleColor: Colors.black,
+ fontWeight: FontWeight.bold, 
+ borderColor: Colors.orange[900],
+ borderRadius: BorderRadius.only(
+  bottomLeft: Radius.circular(30),
+  topRight: Radius.circular(30),
+ ),
+),
+```
+
 ## ❤️ Like Button:
 
 **_Default mode_**
@@ -430,6 +462,8 @@ OpacityButton(
 ## ⭐️ Animation Button:
 
 ```dart
+import 'package:flutter_button/customButtons/anime_press_button.dart';
+
 AnimePressButton(
   borderRadius: BorderRadius.circular(100),
   color: Colors.red,
@@ -448,6 +482,8 @@ AnimePressButton(
 ## Normal Text Button:
 
 ```dart
+import 'package:flutter_button/textButtons/text_button.dart';
+
 FlutterTextButton(
   onTap: () {},
   title: "Flutter Normal TextButton",
@@ -464,6 +500,8 @@ FlutterTextButton(
 ## 🏳️‍🌈 Gradient text button:
 
 ```dart
+import 'package:flutter_button/textButtons/gradient_text_button.dart';
+
 GradientTextButton(
   onTap: () {},
   title: "Gradient Text Button",
