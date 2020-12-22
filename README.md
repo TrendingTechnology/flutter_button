@@ -8,6 +8,12 @@ A Flutter buttons extansion. this extension contains:
 - Facebook Auth Button, Circle FB Auth Button, Magical FB Auth Button, Google Auth Button, Circle GG Auth Button, Magical GG Auth Button
 - Text Button, Gradient Text Button.
 
+## Overview
+
+**_Usage and everthing about this packages was underlined down below. or check example repo_** [example repository](https://github.com/theiskaa/flutter_button/tree/main/example).
+
+<img src="https://github.com/theiskaa/flutter_button/blob/main/example/assets/gif/3D.gif" width="200"> <img src="https://github.com/theiskaa/flutter_button/blob/main/example/assets/gif/social.gif" width="200"> <img src="https://github.com/theiskaa/flutter_button/blob/main/example/assets/gif/custom.gif" width="200"> <img src="https://github.com/theiskaa/flutter_button/blob/main/example/assets/gif/text.gif" width="200"> <img src="https://github.com/theiskaa/flutter_button/blob/main/example/assets/gif/fab.gif" width="200">
+
 # Installation and Usage.
 
 add this line on the `pubspec.yaml`
@@ -20,7 +26,7 @@ dependencies:
 
 after than start using package with implementing library path.
 
-#  🛑 3D Button usage
+# 🛑 3D Button usage
 
 **_Default Mode_**
 
@@ -51,7 +57,7 @@ import 'package:flutter_button/3dButtons/3d_button.dart';
 ),
 ```
 
-# ⚛︎ Social Auth Buttons 
+# ⚛︎ Social Auth Buttons
 
 **_Default Mode_**
 
@@ -156,7 +162,7 @@ CircularFBAuthButton(
      color: Colors.black,
     ),
   ],
-), 
+),
 ```
 
 **_Google_**
@@ -204,7 +210,7 @@ MagicalGGButton(
 ),
 ```
 
-# 💢 Custom Buttons: Hover, like, Opacity, Animation 
+# 💢 Custom Buttons: Hover, like, Opacity, Animation
 
 ## 🌪 Hover Button:
 
@@ -395,4 +401,5 @@ StarFAB(
  onTap: () {},
 ),
 ```
-if you wanna to look this package's full example check the example repo which one is down to this package's repository. [example repository](https://github.com/theiskaa/flutter_button/tree/main/example)
+
+if you wanna to look this package's full usage exapmle, check the example repo which one is down to this package's repository: [example repository](https://github.com/theiskaa/flutter_button/tree/main/example).
