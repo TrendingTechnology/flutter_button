@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_buttons/customButtons/hover_button.dart';
-import 'package:flutter_buttons/customButtons/like_button.dart';
-import 'package:flutter_buttons/customButtons/opacity_button.dart';
-import 'package:flutter_buttons/customButtons/anime_press_button.dart';
+import 'package:flutter_button/custom/hover_button.dart';
+import 'package:flutter_button/custom/insta_love_button.dart';
+import 'package:flutter_button/custom/like_button.dart';
+import 'package:flutter_button/custom/opacity_button.dart';
+import 'package:flutter_button/custom/anime_press_button.dart';
 
 class Custom extends StatelessWidget {
   const Custom({Key key}) : super(key: key);
@@ -13,6 +14,18 @@ class Custom extends StatelessWidget {
       padding: EdgeInsets.symmetric(vertical: 50),
       child: Column(
         children: [
+          InstaLoveButton(
+            iconColor: Colors.red,
+            icon: Icons.home,
+            curve: Curves.bounceInOut,
+            //image: AssetImage("assets/photo.png"),
+            image: NetworkImage("https://picsum.photos/200/300"),
+            //image: AssetImage("assets/photo.png"),
+            onTap: () => print("===== ITS WORK SUCCSESFULL ====="),
+          ),
+          SizedBox(height: 50),
+          buildDivider(),
+          SizedBox(height: 50),
           buildHoverButtons(),
           SizedBox(height: 50),
           buildDivider(),
@@ -29,7 +42,6 @@ class Custom extends StatelessWidget {
           SizedBox(height: 50),
           buildDivider(),
           SizedBox(height: 50),
-          buildAnimePressButton()
         ],
       ),
     );
@@ -133,7 +145,6 @@ class Custom extends StatelessWidget {
           spashColor: Colors.yellow,
           tappedTitleColor: Colors.black,
           fontWeight: FontWeight.bold,
-          
           borderColor: Colors.orange[900],
           borderRadius: BorderRadius.only(
             bottomLeft: Radius.circular(30),

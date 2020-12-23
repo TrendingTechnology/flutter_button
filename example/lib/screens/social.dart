@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_buttons/socialButtons/facebook_auth_button.dart';
-import 'package:flutter_buttons/socialButtons/google_auth_button.dart';
-import 'package:flutter_buttons/socialButtons/github_auth_button.dart';
-import 'package:flutter_buttons/socialButtons/twitter_auth_button.dart';
+import 'package:flutter_button/social/facebook_auth_button.dart';
+import 'package:flutter_button/social/google_auth_button.dart';
+import 'package:flutter_button/social/github_auth_button.dart';
+import 'package:flutter_button/social/twitter_auth_button.dart';
 
 class Social extends StatelessWidget {
   const Social({Key key}) : super(key: key);

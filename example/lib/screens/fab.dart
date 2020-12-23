@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_buttons/FABS/custom_fab.dart';
-import 'package:flutter_buttons/FABS/star_fab.dart';
+import 'package:flutter_button/fabs/custom_fab.dart';
+import 'package:flutter_button/fabs/star_fab.dart';
 
 class FabScreen extends StatelessWidget {
   const FabScreen({Key key}) : super(key: key);
