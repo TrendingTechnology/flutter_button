@@ -1,7 +1,7 @@
 # example
 
-## Screenshots
-<img src="https://github.com/theiskaa/flutter_buttons/blob/main/example/assets/1.png" width="200"> <img src="https://github.com/theiskaa/flutter_buttons/blob/main/example/assets/2.png" width="200"> <img src="https://github.com/theiskaa/flutter_buttons/blob/main/example/assets/3.png" width="200"> <img src="https://github.com/theiskaa/flutter_buttons/blob/main/example/assets/4.png" width="200"> <img src="https://github.com/theiskaa/flutter_buttons/blob/main/example/assets/5.png" width="200"> <img src="https://github.com/theiskaa/flutter_buttons/blob/main/example/assets/6.png" width="200"> <img src="https://github.com/theiskaa/flutter_buttons/blob/main/example/assets/7.png" width="200">
+## Overview
+<img src="https://github.com/theiskaa/flutter_button/blob/main/example/assets/gif/3D.gif" width="200"> <img src="https://github.com/theiskaa/flutter_button/blob/main/example/assets/gif/social.gif" width="200"> <img src="https://github.com/theiskaa/flutter_button/blob/main/example/assets/gif/custom.gif" width="200"> <img src="https://github.com/theiskaa/flutter_button/blob/main/example/assets/gif/text.gif" width="200"> <img src="https://github.com/theiskaa/flutter_button/blob/main/example/assets/gif/fab.gif" width="200">
 
 ## Getting Started
 
