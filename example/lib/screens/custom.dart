@@ -14,15 +14,7 @@ class Custom extends StatelessWidget {
       padding: EdgeInsets.symmetric(vertical: 50),
       child: Column(
         children: [
-          InstaLoveButton(
-            iconColor: Colors.red,
-            icon: Icons.home,
-            curve: Curves.bounceInOut,
-            //image: AssetImage("assets/photo.png"),
-            image: NetworkImage("https://picsum.photos/200/300"),
-            //image: AssetImage("assets/photo.png"),
-            onTap: () => print("===== ITS WORK SUCCSESFULL ====="),
-          ),
+          buildInstaDoubleTapLoveButtons(),
           SizedBox(height: 50),
           buildDivider(),
           SizedBox(height: 50),
@@ -45,6 +37,29 @@ class Custom extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  Column buildInstaDoubleTapLoveButtons() {
+    return Column(
+          children: [
+            InstaLoveButton(
+                image: NetworkImage("https://picsum.photos/200/300"),
+                onTap: () {}),
+            SizedBox(height: 30),
+            InstaLoveButton(
+              iconColor: Colors.red,
+              icon: Icons.favorite_border,
+              size: 80,
+              height: 250,
+              //width: MediaQuery.of(context).size.width,
+              curve: Curves.bounceInOut,
+              duration: Duration(seconds: 1),
+              image: AssetImage("assets/photo.png"),
+              //image: NetworkImage("https://picsum.photos/200/300"),
+              onTap: () {},
+            ),
+          ],
+        );
   }
 
   Column buildAnimePressButton() {

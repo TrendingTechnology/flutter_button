@@ -8,29 +8,28 @@
 
 ## Overview
 
-**_Usage and everthing about this packages was underlined down below. if you wanna to give more info about using this plugin check example repo_** [example repository](https://github.com/theiskaa/flutter_button/tree/main/example).
+**_Usage and everthing about this packages was underlined down below. if you wanna to know more about using this plugin check example repo_** [example repository](https://github.com/theiskaa/flutter_button/tree/main/example).
 
 <img src="https://github.com/theiskaa/flutter_button/blob/main/example/assets/gif/3D.gif" width="200"> <img src="https://github.com/theiskaa/flutter_button/blob/main/example/assets/gif/social.gif" width="200"> <img src="https://github.com/theiskaa/flutter_button/blob/main/example/assets/gif/custom.gif" width="200"> <img src="https://github.com/theiskaa/flutter_button/blob/main/example/assets/gif/text.gif" width="200"> <img src="https://github.com/theiskaa/flutter_button/blob/main/example/assets/gif/fab.gif" width="200">
-
-
-
 
 # Installation and Usage.
 
 add this line on the `pubspec.yaml`
 
-```dart 
+```dart
 dependencies:
   ...
   flutter_button: ^0.0.2
 ```
+
 # OKI let's start using `flutter_button` 💣
+
 ## 🛑 3D Button usage
 
 **_Default Mode_**
 
 ```dart
-import 'package:flutter_button/3dButtons/3d_button.dart';
+import 'package:flutter_button/3d/3d_button.dart';
 
 Button3D(
  onPressed: () {},
@@ -41,7 +40,7 @@ Button3D(
 **_3D Buttons With the custom properties_**
 
 ```dart
-import 'package:flutter_button/3dButtons/3d_button.dart';
+import 'package:flutter_button/3d/3d_button.dart';
 
  Button3D(
  style: StyleOf3dButton(
@@ -61,7 +60,7 @@ import 'package:flutter_button/3dButtons/3d_button.dart';
 **_Default Mode of facebook auth button_**
 
 ```dart
-import 'package:flutter_button/socialButtons/facebook_auth_button.dart';
+import 'package:flutter_button/social/facebook_auth_button.dart';
 
  FacebookAuthButton(
   onTap: () {},
@@ -72,7 +71,7 @@ import 'package:flutter_button/socialButtons/facebook_auth_button.dart';
 **_Facebook Auth Button with custom properties_**
 
 ```dart
-import 'package:flutter_button/socialButtons/facebook_auth_button.dart';
+import 'package:flutter_button/social/facebook_auth_button.dart';
 
 FacebookAuthButton(
  onTap: () {},
@@ -98,7 +97,7 @@ shadows: [
 **_Default Mode of Google Auth Button_**
 
 ```dart
-import 'package:flutter_button/socialButtons/google_auth_button.dart';
+import 'package:flutter_button/social/google_auth_button.dart';
 
 GoogleAuthButton(
  onTap: () {},
@@ -117,7 +116,7 @@ GoogleAuthButton(
 **_Google Auth Button with custom properties_**
 
 ```dart
-import 'package:flutter_button/socialButtons/google_auth_button.dart';
+import 'package:flutter_button/social/google_auth_button.dart';
 
 GoogleAuthButton(
  onTap: () {},
@@ -146,7 +145,7 @@ GoogleAuthButton(
 **_Default Mode of github auth button_**
 
 ```dart
-import 'package:flutter_button/socialButtons/github_auth_button.dart';
+import 'package:flutter_button/social/github_auth_button.dart';
 
 GithubAuthButton(
  borderRadius: BorderRadius.circular(30),
@@ -157,7 +156,7 @@ GithubAuthButton(
 **_Github Auth Button with custom properties_**
 
 ```dart
-import 'package:flutter_button/socialButtons/github_auth_button.dart';
+import 'package:flutter_button/social/github_auth_button.dart';
 
 GithubAuthButton(
  onTap: () {},
@@ -186,7 +185,7 @@ GithubAuthButton(
 **_Default Mode of Twitter auth button_**
 
 ```dart
-import 'package:flutter_button/socialButtons/twitter_auth_button.dart';
+import 'package:flutter_button/social/twitter_auth_button.dart';
 
 TwitterAuthButton(
   borderRadius: BorderRadius.circular(30),
@@ -197,7 +196,7 @@ TwitterAuthButton(
 **_Twitter Auth Button with custom properties_**
 
 ```dart
-import 'package:flutter_button/socialButtons/twitter_auth_button.dart';
+import 'package:flutter_button/social/twitter_auth_button.dart';
 
 TwitterAuthButton(
   onTap: () {},
@@ -228,7 +227,7 @@ TwitterAuthButton(
 **_Facebook_**
 
 ```dart
-import 'package:flutter_button/socialButtons/facebook_auth_button.dart';
+import 'package:flutter_button/social/facebook_auth_button.dart';
 
 CircularFBAuthButton(
   borderRadius: BorderRadius.circular(30),
@@ -247,7 +246,7 @@ CircularFBAuthButton(
 **_Google_**
 
 ```dart
-import 'package:flutter_button/socialButtons/google_auth_button.dart';
+import 'package:flutter_button/social/google_auth_button.dart';
 
 CircularGGAuthButton(
   borderRadius: BorderRadius.circular(30),
@@ -266,7 +265,7 @@ CircularGGAuthButton(
 **_Github_**
 
 ```dart
-import 'package:flutter_button/socialButtons/github_auth_button.dart';
+import 'package:flutter_button/social/github_auth_button.dart';
 
 CircularGIAuthButton(
   backgorundColor: Colors.white,
@@ -290,7 +289,7 @@ CircularGIAuthButton(
 **_Twitter_**
 
 ```dart
-import 'package:flutter_button/socialButtons/twitter_auth_button.dart';
+import 'package:flutter_button/social/twitter_auth_button.dart';
 
  CircularTWAuthButton(
   borderRadius: BorderRadius.circular(30),
@@ -305,7 +304,7 @@ import 'package:flutter_button/socialButtons/twitter_auth_button.dart';
 **_Facebook_**
 
 ```dart
-import 'package:flutter_button/socialButtons/facebook_auth_button.dart';
+import 'package:flutter_button/social/facebook_auth_button.dart';
 
 MagicalFBButton(
   title: "Sign In With Facebook",
@@ -317,7 +316,7 @@ MagicalFBButton(
 **_Google_**
 
 ```dart
-import 'package:flutter_button/socialButtons/google_auth_button.dart';
+import 'package:flutter_button/social/google_auth_button.dart';
 
 MagicalGGButton(
   title: "Sign In With Google",
@@ -325,10 +324,11 @@ MagicalGGButton(
   onTap: () {},
 ),
 ```
+
 **_Github_**
 
 ```dart
-import 'package:flutter_button/socialButtons/github_auth_button.dart';
+import 'package:flutter_button/social/github_auth_button.dart';
 
 MagicalGIButton(
  title: "Sign In With Google",
@@ -336,9 +336,11 @@ MagicalGIButton(
  onTap: () {},
 ),
 ```
+
 **_Twitter_**
+
 ```dart
-import 'package:flutter_button/socialButtons/twitter_auth_button.dart';
+import 'package:flutter_button/social/twitter_auth_button.dart';
 
 MagicalTWButton(
  title: "Sign In With Twitter",
@@ -347,14 +349,14 @@ MagicalTWButton(
 ),
 ```
 
-# 💢 Custom Buttons: Hover, like, Opacity, Animation
+# 💢 Custom Buttons: Hover, like, Opacity, Animation, Insta doubletap like...
 
 ## 🌪 Hover Button:
 
 **_Default mode_**
 
 ```dart
-import 'package:flutter_button/customButtons/hover_button.dart';
+import 'package:flutter_button/custom/hover_button.dart';
 
 HoverButton(
   title: "Hover Button",
@@ -365,7 +367,7 @@ HoverButton(
 **_All properties used version_**
 
 ```dart
-import 'package:flutter_button/customButtons/hover_button.dart';
+import 'package:flutter_button/custom/hover_button.dart';
 
 HoverButton(
   onTap: () {},
@@ -384,10 +386,11 @@ HoverButton(
 ```
 
 ### 🌪 Animated Hover Button:
+
 **_Default mode_**
 
 ```dart
-import 'package:flutter_button/customButtons/hover_button.dart';
+import 'package:flutter_button/custom/hover_button.dart';
 
 AnimatedHoverButton(
   title: "Animated Hover Button",
@@ -396,8 +399,9 @@ AnimatedHoverButton(
 ```
 
 **_All properties used version_**
+
 ```dart
-import 'package:flutter_button/customButtons/hover_button.dart';
+import 'package:flutter_button/custom/hover_button.dart';
 
 AnimatedHoverButton(
  onTap: () {},
@@ -407,7 +411,7 @@ AnimatedHoverButton(
  titleColor: Colors.orange[900],
  spashColor: Colors.yellow,
  tappedTitleColor: Colors.black,
- fontWeight: FontWeight.bold, 
+ fontWeight: FontWeight.bold,
  borderColor: Colors.orange[900],
  borderRadius: BorderRadius.only(
   bottomLeft: Radius.circular(30),
@@ -421,7 +425,7 @@ AnimatedHoverButton(
 **_Default mode_**
 
 ```dart
-import 'package:flutter_button/customButtons/like_button.dart';
+import 'package:flutter_button/custom/like_button.dart';
 
 LikeButton(
   onTap: () {},
@@ -431,7 +435,7 @@ LikeButton(
 **_All properties used version_**
 
 ```dart
-import 'package:flutter_button/customButtons/like_button.dart';
+import 'package:flutter_button/custom/like_button.dart';
 
 LikeButton(
   icon: Icons.home,
@@ -447,7 +451,7 @@ LikeButton(
 ## 👻 Opacity Button:
 
 ```dart
-import 'package:flutter_button/customButtons/opacity_button.dart';
+import 'package:flutter_button/custom/opacity_button.dart';
 
 OpacityButton(
   onTap: () {},
@@ -462,7 +466,7 @@ OpacityButton(
 ## ⭐️ Animation Button:
 
 ```dart
-import 'package:flutter_button/customButtons/anime_press_button.dart';
+import 'package:flutter_button/custom/anime_press_button.dart';
 
 AnimePressButton(
   borderRadius: BorderRadius.circular(100),
@@ -477,12 +481,44 @@ AnimePressButton(
 ),
 ```
 
+## ❤️ Insta DoubleTap Love Button:
+
+**_Default Usage_**
+
+```dart
+import 'package:flutter_button/custom/insta_love_button.dart';
+
+InstaLoveButton(
+  image: NetworkImage("https://picsum.photos/200/300"),
+  onTap: () {},
+),
+```
+
+**_All Properties used mode and with asset's image_**
+
+```dart
+import 'package:flutter_button/custom/insta_love_button.dart';
+
+InstaLoveButton(
+  iconColor: Colors.red,
+  icon: Icons.favorite_border,
+  size: 80,
+  height: 250,
+  //width: MediaQuery.of(context).size.width,
+  curve: Curves.bounceInOut,
+  duration: Duration(seconds: 1),
+  image: AssetImage("assets/photo.png"),
+  //image: NetworkImage("https://picsum.photos/200/300"),
+  onTap: () {},
+),
+```
+
 # 🆃 Text Buttons
 
 ## Normal Text Button:
 
 ```dart
-import 'package:flutter_button/textButtons/text_button.dart';
+import 'package:flutter_button/text/text_button.dart';
 
 FlutterTextButton(
   onTap: () {},
@@ -500,7 +536,7 @@ FlutterTextButton(
 ## 🏳️‍🌈 Gradient text button:
 
 ```dart
-import 'package:flutter_button/textButtons/gradient_text_button.dart';
+import 'package:flutter_button/text/gradient_text_button.dart';
 
 GradientTextButton(
   onTap: () {},
@@ -533,6 +569,8 @@ GradientTextButton(
 **_Default Mode_**
 
 ```dart
+import 'package:flutter_button/fabs/custom_fab.dart';
+
 CustomFAB(
  child: Icon(Icons.add),
  onTap: () {},
@@ -542,6 +580,8 @@ CustomFAB(
 **_Custom Fab with all properties_**
 
 ```dart
+import 'package:flutter_button/fabs/custom_fab.dart';
+
 CustomFAB(
  onTap: () {},
  child: Icon(Icons.add),
@@ -560,6 +600,8 @@ CustomFAB(
 **_Default Mode_**
 
 ```dart
+import 'package:flutter_button/fabs/star_fab.dart';
+
 StarFAB(
  child: Icon(Icons.add),
  onTap: () {},
@@ -569,6 +611,8 @@ StarFAB(
 **_Custom Fab with all properties_**
 
 ```dart
+import 'package:flutter_button/fabs/star_fab.dart';
+
 StarFAB(
  backgroundColor: Colors.black,
  child: Icon(Icons.add),

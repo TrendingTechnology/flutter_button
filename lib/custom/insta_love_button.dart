@@ -43,7 +43,7 @@ class _InstaLoveButtonState extends State<InstaLoveButton>
       vsync: this,
       duration: (widget.duration != null)
           ? widget.duration
-          : Duration(milliseconds: 250),
+          : Duration(milliseconds: 500),
     );
 
     _curve = CurvedAnimation(
